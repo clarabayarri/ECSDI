@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-service-Centre1Service" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/Centre1Service"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/Centre1Service" destdir="${build.generated.dir}/jax-wsCache/service/Centre1Service" wsdl="${basedir}/${conf-dir}xml-resources/web-services/Centre1Service/wsdl/Centre1Service.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/Centre1Service/wsdl/Centre1Service.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/Centre1Service"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/Centre1Service">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/Centre1Service">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/Centre1Service/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-Centre1Service" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/Centre1Service"/>
+    </target>
+    <target name="wsimport-service-Centre2Service" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/Centre2Service"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/Centre2Service" destdir="${build.generated.dir}/jax-wsCache/service/Centre2Service" wsdl="${basedir}/${conf-dir}xml-resources/web-services/Centre2Service/wsdl/Centre2Service.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/Centre2Service/wsdl/Centre2Service.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/Centre2Service"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/Centre2Service">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/Centre2Service">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/Centre2Service/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-Centre2Service" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/Centre2Service"/>
+    </target>
+    <target name="wsimport-service-Centre3Service" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/Centre3Service"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/Centre3Service" destdir="${build.generated.dir}/jax-wsCache/service/Centre3Service" wsdl="${basedir}/${conf-dir}xml-resources/web-services/Centre3Service/wsdl/Centre3Service.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/Centre3Service/wsdl/Centre3Service.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/Centre3Service"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/Centre3Service">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/Centre3Service">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/Centre3Service/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-Centre3Service" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/Centre3Service"/>
+    </target>
+    <target name="wsimport-service-Centre4Service" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/Centre4Service"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/Centre4Service" destdir="${build.generated.dir}/jax-wsCache/service/Centre4Service" wsdl="${basedir}/${conf-dir}xml-resources/web-services/Centre4Service/wsdl/Centre4Service.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/Centre4Service/wsdl/Centre4Service.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/Centre4Service"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/Centre4Service">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/Centre4Service">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/Centre4Service/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-Centre4Service" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/Centre4Service"/>
+    </target>
+    <target name="wsimport-service-Centre5Service" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/Centre5Service"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/Centre5Service" destdir="${build.generated.dir}/jax-wsCache/service/Centre5Service" wsdl="${basedir}/${conf-dir}xml-resources/web-services/Centre5Service/wsdl/Centre5Service.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/Centre5Service/wsdl/Centre5Service.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/Centre5Service"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/Centre5Service">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/Centre5Service">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/Centre5Service/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-Centre5Service" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/Centre5Service"/>
+    </target>
+    <target name="wsimport-service-Centre6Service" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/Centre6Service"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/Centre6Service" destdir="${build.generated.dir}/jax-wsCache/service/Centre6Service" wsdl="${basedir}/${conf-dir}xml-resources/web-services/Centre6Service/wsdl/Centre6Service.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/Centre6Service/wsdl/Centre6Service.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/Centre6Service"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/Centre6Service">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/Centre6Service">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/Centre6Service/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-Centre6Service" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/Centre6Service"/>
+    </target>
+    <target name="wsimport-service-ReservesService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/ReservesService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/ReservesService" destdir="${build.generated.dir}/jax-wsCache/service/ReservesService" wsdl="${basedir}/${conf-dir}xml-resources/web-services/ReservesService/wsdl/ReservesService.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/ReservesService/wsdl/ReservesService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/ReservesService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/ReservesService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/ReservesService">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/ReservesService/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-ReservesService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/ReservesService"/>
+    </target>
+    <target name="wsimport-service-generate" depends="wsimport-service-Centre1Service, wsimport-service-Centre2Service, wsimport-service-Centre3Service, wsimport-service-Centre4Service, wsimport-service-Centre5Service, wsimport-service-Centre6Service, wsimport-service-ReservesService"/>
+</project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Asseguradora1" targetNamespace="http://www.owl-ontologies.com/ECSDIServices" xmlns="http://www.owl-ontologies.com/ECSDIServices" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://www.owl-ontologies.com/ECSDIServices-impl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.owl-ontologies.com/ECSDIServices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://www.owl-ontologies.com/ECSDIServices" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.owl-ontologies.com/ECSDIServices" version="OWLS2WSDL Tue May 28 16:23:35 CEST 2013" xmlns="http://www.owl-ontologies.com/ECSDIServices" xmlns:tns="http://schemas.dmas.dfki.de/venetianblind"><xsd:annotation><xsd:documentation>Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/ECSDIOntology.owl#Conjunt_restriccions</xsd:documentation><xsd:documentation>Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/ECSDIOntology.owl#Pacient</xsd:documentation><xsd:documentation>Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/ECSDIOntology.owl#Accio</xsd:documentation><xsd:documentation>Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/ECSDIOntology.owl#Conjunt_centres</xsd:documentation></xsd:annotation><xsd:element name="Conjunt_restriccions" type="Conjunt_restriccionsType"/><xsd:element name="Accio" type="AccioType"/><xsd:element abstract="true" name="Entitat" type="Entitat"/><xsd:element name="Conjunt_centres" type="Conjunt_centresType"/><xsd:element abstract="true" name="Thing" type="ThingType"/><xsd:element name="Pacient" substitutionGroup="Entitat" type="PacientType"/><xsd:complexType name="Professional_sanitari"><xsd:sequence><xsd:element minOccurs="0" name="identificador_professional" type="xsd:string"/></xsd:sequence></xsd:complexType><xsd:complexType name="Conjunt_restriccions"><xsd:sequence><xsd:element minOccurs="0" name="seguint" type="Restriccio"/></xsd:sequence></xsd:complexType><xsd:complexType name="AccioType"><xsd:sequence><xsd:element minOccurs="0" name="pot_ser_substituida_per" type="AccioType"/></xsd:sequence></xsd:complexType><xsd:complexType name="Historia"><xsd:sequence><xsd:element name="Descripcio_inicial" type="xsd:string"/><xsd:element name="Estat_historia" type="Estat_historiaType"/><xsd:element minOccurs="0" name="esta_formada_per" type="Cita"/><xsd:element minOccurs="0" name="distribuida_en" type="Pauta"/></xsd:sequence></xsd:complexType><xsd:complexType name="PacientType"><xsd:sequence><xsd:element name="DNI" type="xsd:string"/><xsd:element name="NumeroSS" type="xsd:string"/><xsd:element minOccurs="0" name="prefereix" type="Preferencia"/><xsd:element minOccurs="0" name="te_histories" type="Historia"/><xsd:element name="viu_a" type="Coordenades"/><xsd:element minOccurs="0" name="esta_cobert_per" type="Polissa"/></xsd:sequence></xsd:complexType><xsd:complexType name="Conjunt_centresType"><xsd:sequence><xsd:element minOccurs="0" name="autoritza_els_centres" type="Centre_de_salut"/></xsd:sequence></xsd:complexType><xsd:complexType name="Centre_de_salut"><xsd:sequence><xsd:element minOccurs="0" name="es_troba_a" type="Coordenades"/><xsd:element minOccurs="0" name="pot_realitzar" type="AccioType"/></xsd:sequence></xsd:complexType><xsd:complexType name="Tipus_polissa"><xsd:sequence><xsd:element name="Nivell_de_cobertura" type="xsd:string"/><xsd:element minOccurs="0" name="cobreix" type="AccioType"/></xsd:sequence></xsd:complexType><xsd:complexType name="Coordenades"><xsd:sequence><xsd:element minOccurs="0" name="Altitud" type="xsd:float"/><xsd:element minOccurs="0" name="Latitud" type="xsd:float"/></xsd:sequence></xsd:complexType><xsd:complexType name="Cita"><xsd:sequence><xsd:element minOccurs="0" name="Estat_cita" type="Estat_citaType"/><xsd:element name="ha_citat" type="PacientType"/><xsd:element name="te_lloc_a" type="Centre_de_salut"/><xsd:element name="citat_per" type="Professional_sanitari"/><xsd:element minOccurs="0" name="produeix" type="Resultat"/><xsd:element name="per_realitzar" type="AccioType"/><xsd:element name="te_lloc_en" type="Franja_horaria"/></xsd:sequence></xsd:complexType><xsd:complexType name="Resultat"><xsd:sequence><xsd:element minOccurs="0" name="Descripcio_resultat" type="xsd:string"/></xsd:sequence></xsd:complexType><xsd:complexType name="Franja_horaria"><xsd:sequence><xsd:element minOccurs="0" name="Data_inici" type="xsd:dateTime"/><xsd:element minOccurs="0" name="Data_fi" type="xsd:dateTime"/></xsd:sequence></xsd:complexType><xsd:complexType name="Conjunt_restriccionsType"><xsd:sequence><xsd:element minOccurs="0" name="seguint" type="Restriccio"/></xsd:sequence></xsd:complexType><xsd:complexType name="Asseguradora"><xsd:sequence><xsd:element minOccurs="0" name="es_responsable_de" type="Polissa"/><xsd:element minOccurs="0" name="te_adscrits" type="Centre_de_salut"/></xsd:sequence></xsd:complexType><xsd:complexType name="Polissa"><xsd:sequence><xsd:element minOccurs="0" name="es_del_tipus_polissa" type="Tipus_polissa"/><xsd:element minOccurs="0" name="cobreix_a" type="PacientType"/><xsd:element minOccurs="0" name="pertany_a" type="Asseguradora"/></xsd:sequence></xsd:complexType><xsd:complexType name="Pauta"><xsd:sequence><xsd:element minOccurs="0" name="genera" type="Conjunt_restriccions"/></xsd:sequence></xsd:complexType><xsd:simpleType name="Estat_citaType"><xsd:restriction base="xsd:string"><xsd:enumeration value="concertada"/><xsd:enumeration value="cancelada"/><xsd:enumeration value="realitzada"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="Entitat"><xsd:restriction base="xsd:string"/></xsd:simpleType><xsd:simpleType name="Estat_historiaType"><xsd:restriction base="xsd:string"><xsd:enumeration value="iniciada"/><xsd:enumeration value="finalitzada"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="ThingType"><xsd:restriction base="xsd:anyURI"/></xsd:simpleType><xsd:simpleType name="Restriccio"><xsd:restriction base="xsd:string"/></xsd:simpleType><xsd:simpleType name="Preferencia"><xsd:restriction base="xsd:string"/></xsd:simpleType></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="LlistaCentresDeSalutResponse">
+    <wsdl:part name="OutputCentresAutoritzats" type="Conjunt_centresType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="LlistaCentresDeSalutRequest">
+    <wsdl:part name="InputRestriccions" type="Conjunt_restriccionsType">
+    </wsdl:part>
+    <wsdl:part name="InputPacientAutoritzacio" type="PacientType">
+    </wsdl:part>
+    <wsdl:part name="InputAccioAutoritzacio" type="AccioType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Asseguradora1PortType">
+    <wsdl:operation name="LlistaCentresDeSalut">
+      <wsdl:input message="LlistaCentresDeSalutRequest">
+    </wsdl:input>
+      <wsdl:output message="LlistaCentresDeSalutResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Asseguradora1Binding" type="Asseguradora1PortType">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="LlistaCentresDeSalut">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.owl-ontologies.com/ECSDIServices"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.owl-ontologies.com/ECSDIServices"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Asseguradora1Service">
+    <wsdl:port name="Asseguradora1Port" binding="Asseguradora1Binding">
+      <wsdlsoap:address location="http://www.owl-ontologies.com/ECSDIServices"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
