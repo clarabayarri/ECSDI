@@ -8,4 +8,6 @@
     <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre5Service.wsdl" uri="src/conf/xml-resources/web-services/Centre5Service/wsdl/Centre5Service.wsdl"/>
     <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre6Service.wsdl" uri="src/conf/xml-resources/web-services/Centre6Service/wsdl/Centre6Service.wsdl"/>
     <system systemId="file:/C:/Users/clara.bayarri/Downloads/ReservesService.wsdl" uri="src/conf/xml-resources/web-services/ReservesService/wsdl/ReservesService.wsdl"/>
+    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?wsdl" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.wsdl"/>
+    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?xsd=1" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.xsd_1.xsd"/>
 </catalog>

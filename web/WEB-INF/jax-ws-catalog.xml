@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/Asseguradora1.wsdl" uri="src/conf/xml-resources/web-services/Asseguradora1Service/wsdl/Asseguradora1.wsdl"/>
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre1Service.wsdl" uri="src/conf/xml-resources/web-services/Centre1Service/wsdl/Centre1Service.wsdl"/>
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre2Service.wsdl" uri="src/conf/xml-resources/web-services/Centre2Service/wsdl/Centre2Service.wsdl"/>
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre3Service.wsdl" uri="src/conf/xml-resources/web-services/Centre3Service/wsdl/Centre3Service.wsdl"/>
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre4Service.wsdl" uri="src/conf/xml-resources/web-services/Centre4Service/wsdl/Centre4Service.wsdl"/>
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre5Service.wsdl" uri="src/conf/xml-resources/web-services/Centre5Service/wsdl/Centre5Service.wsdl"/>
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/Centre6Service.wsdl" uri="src/conf/xml-resources/web-services/Centre6Service/wsdl/Centre6Service.wsdl"/>
+    <system systemId="file:/C:/Users/clara.bayarri/Downloads/ReservesService.wsdl" uri="src/conf/xml-resources/web-services/ReservesService/wsdl/ReservesService.wsdl"/>
+    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?wsdl" uri="wsdl/localhost_8080/MatchmakerWS/MatchMaker.wsdl"/>
+    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?xsd=1" uri="wsdl/localhost_8080/MatchmakerWS/MatchMaker.xsd_1.xsd"/>
+</catalog>
