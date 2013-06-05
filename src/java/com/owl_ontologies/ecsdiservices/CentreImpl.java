@@ -23,11 +23,18 @@ public class CentreImpl {
         ConjuntOfertesType conjuntOfertes = new ConjuntOfertesType();
         Random random = new Random();
         List<Oferta> ofertes = new ArrayList<Oferta>();
-        while (random.nextInt(5) != 0) {
+        do {
             Oferta oferta = new Oferta();
+            //oferta.costa = new Preu();
+            //oferta.estaDisponibleEn = new Disponibilitat();
+            List<FranjaHoraria> franjes = new ArrayList<FranjaHoraria>();
+            franjes.add(new FranjaHoraria());
+            //oferta.estaDisponibleEn.conteFranjes = franjes;
+            //oferta.esPerUna = (Accio) tipusProvaAnalisi;
             ofertes.add(oferta);
-        }
+        } while (random.nextInt(5) != 0);
         conjuntOfertes.ofereix = ofertes;
+        System.out.println("\tRetornem " + ofertes.size() + " ofertes.");
         return conjuntOfertes;
     }
 }
