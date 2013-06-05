@@ -1,208 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="Centre1Service">
-      <implementation-class>ecsdi.Centre1Service</implementation-class>
-      <wsdl-url>file:/C:/Users/clara.bayarri/Downloads/Centre1Service.wsdl</wsdl-url>
-      <local-wsdl-file>Centre1Service.wsdl</local-wsdl-file>
-      <service-name>Centre1Service</service-name>
-      <port-name>Centre1Port</port-name>
-      <package-name>com.owl_ontologies.ecsdiservices</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
+    <service name="Centre1PortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.Centre1PortType</implementation-class>
     </service>
-    <service name="Centre2Service">
-      <implementation-class>ecsdi.Centre2Service</implementation-class>
-      <wsdl-url>file:/C:/Users/clara.bayarri/Downloads/Centre2Service.wsdl</wsdl-url>
-      <local-wsdl-file>Centre2Service.wsdl</local-wsdl-file>
-      <service-name>Centre2Service</service-name>
-      <port-name>Centre2Port</port-name>
-      <package-name>com.owl_ontologies.ecsdiservices</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
+    <service name="Centre3PortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.Centre3PortType</implementation-class>
     </service>
-    <service name="Centre3Service">
-      <implementation-class>ecsdi.Centre3Service</implementation-class>
-      <wsdl-url>file:/C:/Users/clara.bayarri/Downloads/Centre3Service.wsdl</wsdl-url>
-      <local-wsdl-file>Centre3Service.wsdl</local-wsdl-file>
-      <service-name>Centre3Service</service-name>
-      <port-name>Centre3Port</port-name>
-      <package-name>com.owl_ontologies.ecsdiservices</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
+    <service name="Centre4PortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.Centre4PortType</implementation-class>
     </service>
-    <service name="Centre4Service">
-      <implementation-class>ecsdi.Centre4Service</implementation-class>
-      <wsdl-url>file:/C:/Users/clara.bayarri/Downloads/Centre4Service.wsdl</wsdl-url>
-      <local-wsdl-file>Centre4Service.wsdl</local-wsdl-file>
-      <service-name>Centre4Service</service-name>
-      <port-name>Centre4Port</port-name>
-      <package-name>com.owl_ontologies.ecsdiservices</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
+    <service name="Centre6PortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.Centre6PortType</implementation-class>
     </service>
-    <service name="Centre5Service">
-      <implementation-class>ecsdi.Centre5Service</implementation-class>
-      <wsdl-url>file:/C:/Users/clara.bayarri/Downloads/Centre5Service.wsdl</wsdl-url>
-      <local-wsdl-file>Centre5Service.wsdl</local-wsdl-file>
-      <service-name>Centre5Service</service-name>
-      <port-name>Centre5Port</port-name>
-      <package-name>com.owl_ontologies.ecsdiservices</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
+    <service name="ReservesPortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.ReservesPortType</implementation-class>
     </service>
-    <service name="Centre6Service">
-      <implementation-class>ecsdi.Centre6Service</implementation-class>
-      <wsdl-url>file:/C:/Users/clara.bayarri/Downloads/Centre6Service.wsdl</wsdl-url>
-      <local-wsdl-file>Centre6Service.wsdl</local-wsdl-file>
-      <service-name>Centre6Service</service-name>
-      <port-name>Centre6Port</port-name>
-      <package-name>com.owl_ontologies.ecsdiservices</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
+    <service name="Centre2PortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.Centre2PortType</implementation-class>
     </service>
-    <service name="ReservesService">
-      <implementation-class>ecsdi.ReservesService</implementation-class>
-      <wsdl-url>file:/C:/Users/clara.bayarri/Downloads/ReservesService.wsdl</wsdl-url>
-      <local-wsdl-file>ReservesService.wsdl</local-wsdl-file>
-      <service-name>ReservesService</service-name>
-      <port-name>ReservesPort</port-name>
-      <package-name>com.owl_ontologies.ecsdiservices</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
+    <service name="Centre5PortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.Centre5PortType</implementation-class>
+    </service>
+    <service name="Asseguradora1PortType">
+      <implementation-class>com.owl_ontologies.ecsdiservices.Asseguradora1PortType</implementation-class>
     </service>
   </services>
   <clients>
     <client name="MatchMaker">
       <wsdl-url>http://localhost:8080/MatchmakerWS/MatchMaker?wsdl</wsdl-url>
       <local-wsdl-file>localhost_8080/MatchmakerWS/MatchMaker.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">ecsdi</package-name>
+      <package-name forceReplace="true">com.owl_ontologies.matchmakerclient</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -227,10 +55,9 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>ecsdi</wsimport-option-value>
+          <wsimport-option-value>com.owl_ontologies.matchmakerclient</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>
   </clients>
-  <jsr109>true</jsr109>
 </jax-ws>

@@ -4,7 +4,6 @@
     <configuration>
         <buildExtensions xmlns="http://www.netbeans.org/ns/ant-build-extender/1">
             <extension file="jaxws-build.xml" id="jaxws">
-                <dependency dependsOn="wsimport-service-generate" target="-pre-pre-compile"/>
                 <dependency dependsOn="wsimport-client-generate" target="-pre-pre-compile"/>
             </extension>
         </buildExtensions>
@@ -13,7 +12,7 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-                    <file>${file.reference.caller-0.0.2-jar-with-dependencies.jar}</file>
+                    <file>${file.reference.caller-0.0.4-jar-with-dependencies.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
@@ -26,7 +25,7 @@
             </test-roots>
         </data>
         <libraries xmlns="http://www.netbeans.org/ns/ant-project-libraries/1">
-            <definitions>.\lib\nblibraries.properties</definitions>
+            <definitions>./lib/nblibraries.properties</definitions>
         </libraries>
     </configuration>
 </project>
