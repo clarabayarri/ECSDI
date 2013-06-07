@@ -1,8 +1,6 @@
 
 package com.owl_ontologies.ecsdiservices;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -21,8 +19,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Data_inici" type="{http://www.w3.org/2001/XMLSchema}dateTime" maxOccurs="5000" minOccurs="0"/>
- *         &lt;element name="Data_fi" type="{http://www.w3.org/2001/XMLSchema}dateTime" maxOccurs="5000" minOccurs="0"/>
+ *         &lt;element name="Data_inici" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="Data_fi" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,69 +36,59 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class FranjaHoraria {
 
-    @XmlElement(name = "Data_inici")
+    @XmlElement(name = "Data_inici", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected List<XMLGregorianCalendar> dataInici;
-    @XmlElement(name = "Data_fi")
+    protected XMLGregorianCalendar dataInici;
+    @XmlElement(name = "Data_fi", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected List<XMLGregorianCalendar> dataFi;
+    protected XMLGregorianCalendar dataFi;
 
     /**
      * Gets the value of the dataInici property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the dataInici property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getDataInici().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link XMLGregorianCalendar }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public List<XMLGregorianCalendar> getDataInici() {
-        if (dataInici == null) {
-            dataInici = new ArrayList<XMLGregorianCalendar>();
-        }
-        return this.dataInici;
+    public XMLGregorianCalendar getDataInici() {
+        return dataInici;
+    }
+
+    /**
+     * Sets the value of the dataInici property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDataInici(XMLGregorianCalendar value) {
+        this.dataInici = value;
     }
 
     /**
      * Gets the value of the dataFi property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the dataFi property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getDataFi().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link XMLGregorianCalendar }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public List<XMLGregorianCalendar> getDataFi() {
-        if (dataFi == null) {
-            dataFi = new ArrayList<XMLGregorianCalendar>();
-        }
-        return this.dataFi;
+    public XMLGregorianCalendar getDataFi() {
+        return dataFi;
+    }
+
+    /**
+     * Sets the value of the dataFi property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDataFi(XMLGregorianCalendar value) {
+        this.dataFi = value;
     }
 
 }

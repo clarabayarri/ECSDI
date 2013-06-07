@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Estat_cita" type="{http://www.owl-ontologies.com/ECSDIServices}Estat_citaType" maxOccurs="5000" minOccurs="0"/>
+ *         &lt;element name="Estat_cita" type="{http://www.owl-ontologies.com/ECSDIServices}Estat_citaType"/>
  *         &lt;element name="ha_citat" type="{http://www.owl-ontologies.com/ECSDIServices}PacientType"/>
  *         &lt;element name="te_lloc_a" type="{http://www.owl-ontologies.com/ECSDIServices}Centre_de_salut"/>
  *         &lt;element name="citat_per" type="{http://www.owl-ontologies.com/ECSDIServices}Professional_sanitari"/>
@@ -46,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Cita {
 
-    @XmlElement(name = "Estat_cita")
-    protected List<EstatCitaType> estatCita;
+    @XmlElement(name = "Estat_cita", required = true)
+    protected EstatCitaType estatCita;
     @XmlElement(name = "ha_citat", required = true)
     protected PacientType haCitat;
     @XmlElement(name = "te_lloc_a", required = true)
@@ -63,30 +63,25 @@ public class Cita {
     /**
      * Gets the value of the estatCita property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the estatCita property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getEstatCita().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link EstatCitaType }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link EstatCitaType }
+     *     
      */
-    public List<EstatCitaType> getEstatCita() {
-        if (estatCita == null) {
-            estatCita = new ArrayList<EstatCitaType>();
-        }
-        return this.estatCita;
+    public EstatCitaType getEstatCita() {
+        return estatCita;
+    }
+
+    /**
+     * Sets the value of the estatCita property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EstatCitaType }
+     *     
+     */
+    public void setEstatCita(EstatCitaType value) {
+        this.estatCita = value;
     }
 
     /**

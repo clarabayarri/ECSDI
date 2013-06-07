@@ -37,7 +37,15 @@ public class ReservesPortType {
         PacientType pacientReserva,
         @WebParam(name = "ofertaReserva", partName = "ofertaReserva")
         OfertaType ofertaReserva) {
-        return new CitaType();
+        CitaType cita = new CitaType();
+        //cita.estatCita = EstatCitaType.CONCERTADA;
+        cita.perRealitzar = ofertaReserva.esPerUna;
+        cita.teLlocA = ofertaReserva.pertanyAUn;
+        if ((ofertaReserva.estaDisponibleEn != null) && 
+                (ofertaReserva.estaDisponibleEn.conteFranjes != null) &&
+                !ofertaReserva.estaDisponibleEn.conteFranjes.isEmpty())
+            cita.teLlocEn = ofertaReserva.estaDisponibleEn.conteFranjes.get(0);
+        return cita;
     }
 
 }

@@ -36,19 +36,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FranjaHoraria }
+     * Create an instance of {@link Resultat }
      * 
      */
-    public FranjaHoraria createFranjaHoraria() {
-        return new FranjaHoraria();
+    public Resultat createResultat() {
+        return new Resultat();
     }
 
     /**
-     * Create an instance of {@link Polissa }
+     * Create an instance of {@link ConjuntRestriccionsType }
      * 
      */
-    public Polissa createPolissa() {
-        return new Polissa();
+    public ConjuntRestriccionsType createConjuntRestriccionsType() {
+        return new ConjuntRestriccionsType();
     }
 
     /**
@@ -60,19 +60,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Resultat }
+     * Create an instance of {@link Historia }
      * 
      */
-    public Resultat createResultat() {
-        return new Resultat();
-    }
-
-    /**
-     * Create an instance of {@link Asseguradora }
-     * 
-     */
-    public Asseguradora createAsseguradora() {
-        return new Asseguradora();
+    public Historia createHistoria() {
+        return new Historia();
     }
 
     /**
@@ -84,35 +76,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CentreDeSalut }
-     * 
-     */
-    public CentreDeSalut createCentreDeSalut() {
-        return new CentreDeSalut();
-    }
-
-    /**
      * Create an instance of {@link ProfessionalSanitari }
      * 
      */
     public ProfessionalSanitari createProfessionalSanitari() {
         return new ProfessionalSanitari();
-    }
-
-    /**
-     * Create an instance of {@link Coordenades }
-     * 
-     */
-    public Coordenades createCoordenades() {
-        return new Coordenades();
-    }
-
-    /**
-     * Create an instance of {@link Accio }
-     * 
-     */
-    public Accio createAccio() {
-        return new Accio();
     }
 
     /**
@@ -132,6 +100,38 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Polissa }
+     * 
+     */
+    public Polissa createPolissa() {
+        return new Polissa();
+    }
+
+    /**
+     * Create an instance of {@link FranjaHoraria }
+     * 
+     */
+    public FranjaHoraria createFranjaHoraria() {
+        return new FranjaHoraria();
+    }
+
+    /**
+     * Create an instance of {@link Accio }
+     * 
+     */
+    public Accio createAccio() {
+        return new Accio();
+    }
+
+    /**
+     * Create an instance of {@link CentreDeSalut }
+     * 
+     */
+    public CentreDeSalut createCentreDeSalut() {
+        return new CentreDeSalut();
+    }
+
+    /**
      * Create an instance of {@link PacientType }
      * 
      */
@@ -140,27 +140,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ConjuntRestriccionsType }
+     * Create an instance of {@link Coordenades }
      * 
      */
-    public ConjuntRestriccionsType createConjuntRestriccionsType() {
-        return new ConjuntRestriccionsType();
+    public Coordenades createCoordenades() {
+        return new Coordenades();
     }
 
     /**
-     * Create an instance of {@link Historia }
+     * Create an instance of {@link Asseguradora }
      * 
      */
-    public Historia createHistoria() {
-        return new Historia();
-    }
-
-    /**
-     * Create an instance of {@link ConjuntRestriccions }
-     * 
-     */
-    public ConjuntRestriccions createConjuntRestriccions() {
-        return new ConjuntRestriccions();
+    public Asseguradora createAsseguradora() {
+        return new Asseguradora();
     }
 
     /**

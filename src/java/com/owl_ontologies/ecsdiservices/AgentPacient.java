@@ -5,6 +5,7 @@
 package com.owl_ontologies.ecsdiservices;
 
 import com.github.tranchis.caller.Caller;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,97 +41,116 @@ public class AgentPacient {
         correspondencies.put(AnalisiType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Analisi");
         correspondencies.put(ColonoscopiaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Colonoscopia");
         correspondencies.put(CirurgiaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Cirurgia");
-        correspondencies.put(EspecialistaAnestesistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Especialista_anestesista");
-        correspondencies.put(EspecialistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Especialista");
+        correspondencies.put(EspecialistaAnestesistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Visita_medica_especialista_anestesista");
+        correspondencies.put(EspecialistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Visita_medica_especialista");
     }
 
     public void executaHistoria() {
         init();
         
+        Historia historia = new Historia();
+        historia.setDescripcioInicial("Nova historia");
+        historia.setEstatHistoria(EstatHistoriaType.INICIADA);
+        historia.estaFormadaPer = new ArrayList<Cita>();
+        
         System.out.println("\n\n----------- Comença la historia! -----------\n");
         // Visita inicial
         System.out.println("\n---- Programem la primera visita ----\n");
-        programaVisitaProfessional();
+        CitaType cita = programaVisitaProfessional();
+        if (cita != null)
+            historia.estaFormadaPer.add(transform(cita));
         
         // Tractaments, proves i visites a l'atzar
         System.out.println("\n---- Programem altres visites a l'atzar ----\n");
         do {
             int opcio = random.nextInt(3);
             switch (opcio) {
-                case 0: programaProva();
+                case 0: cita = programaProva();
                     break;
-                case 1: programaTractament();
+                case 1: cita = programaTractament();
                     break;
-                default: programaVisitaProfessional();
+                default: cita = programaVisitaProfessional();
                     break;
             }
+            if (cita != null)
+                historia.estaFormadaPer.add(transform(cita));
         } while (random.nextInt(7) != 0);
         
         // Visita final
         System.out.println("\n---- Programem la visita final ----\n");
-        programaVisitaProfessional();
+        cita = programaVisitaProfessional();
+        if (cita != null)
+                historia.estaFormadaPer.add(transform(cita));
         
-        System.out.println("\n----------- Historia completada! -----------\n");
+        System.out.println("\n----------- Historia completada! -----------");
+        System.out.println("\tLa historia conté " + historia.estaFormadaPer.size() + " cites.\n");
     }
     
-    private void programaProva() {
+    private CitaType programaProva() {
         // Escollir prova
         int possIndex = random.nextInt(possibilitatsProves.length);
         Object accio = possibilitatsProves[possIndex];
-        programaVisita(accio);
+        System.out.println("\tDecidim solicitar una cita per la prova " + accio.getClass() + "\n");
+        return programaVisita(accio);
     }
     
-    private void programaTractament() {
+    private CitaType programaTractament() {
         // Escollir prova
         int possIndex = random.nextInt(possibilitatsTractaments.length);
         Object accio = possibilitatsTractaments[possIndex];
-        programaVisita(accio);
+        System.out.println("\tDecidim solicitar una cita per el tractament " + accio.getClass() + "\n");
+        return programaVisita(accio);
     }
     
-    private void programaVisitaProfessional() {
+    private CitaType programaVisitaProfessional() {
         // Escollir prova
         int possIndex = random.nextInt(possibilitatsProfessionalsSanitaris.length);
         Object accio = possibilitatsProfessionalsSanitaris[possIndex];
-        programaVisita(accio);
+        System.out.println("\tDecidim solicitar una cita per el metge " + accio.getClass() + "\n");
+        return programaVisita(accio);
     }
     
-    private void programaVisita(Object accio) {
+    private CitaType programaVisita(Object accio) {
         // Obtenir serveis
         ConjuntCentresType centres = obtenirPossibilitats(accio);
 
         // Escollir servei
         List<CentreDeSalut> possibilitats = centres.getAutoritzaElsCentres();
-        System.out.println("\tRebut el conjunt de centres: " + 
+        System.out.println("\n\tRebut el conjunt de centres: " + 
                 possibilitats.toString());
         if (possibilitats.isEmpty()) {
-            System.out.println("\tNo s'ha rebut cap possible centre!\n");
-            return;
+            System.out.println("\tNo s'ha rebut cap possible centre!\n\n");
+            return null;
         }
         int indexEscollit = random.nextInt(possibilitats.size());
-        System.out.println("\tServei escollit: " + possibilitats.get(indexEscollit).getURLServeiDisponibilitat());
+        System.out.println("\tServei escollit: " + possibilitats.get(indexEscollit).getURLServeiDisponibilitat() + "\n");
         
         // Demanar disponibilitat al centre escollit
         ConjuntOfertesType ofertes = obtenirDisponibilitats(possibilitats.get(indexEscollit), accio);
         
         // Escollir oferta a random
         List<Oferta> ofertesRebudes = ofertes.getOfereix();
+        System.out.println("\n\tRebut el conjunt de ofertes: " + 
+                ofertesRebudes.toString());
         if (ofertesRebudes.isEmpty()) {
-            System.out.println("\tNo s'ha rebut cap oferta!\n");
-            return;
+            System.out.println("\tNo s'ha rebut cap oferta!\n\n");
+            return null;
         }
         int ofertaEscollida = random.nextInt(ofertesRebudes.size());
         
         // Obtenir cita
         CitaType cita = reservarCita(ofertesRebudes.get(ofertaEscollida));
-        System.out.println("\tCita reservada correctament.\n");
+        System.out.println("\tCita reservada correctament.\n\n");
+        
+        return cita;
     }
 
     private ConjuntCentresType obtenirPossibilitats(Object accio) {
         Caller c = new Caller();
         Object centres = c.callService(
                 asseguradoraService,
-                new Object[]{new ConjuntRestriccionsType(), pacient, 
-                    correspondencies.get(accio.getClass())},
+                new Object[]{correspondencies.get(accio.getClass()), pacient, 
+                    new ConjuntRestriccionsType()},
                 ConjuntCentresType.class);
 
         return (ConjuntCentresType) centres;
@@ -155,5 +175,16 @@ public class AgentPacient {
                 CitaType.class);
 
         return (CitaType) result;
+    }
+    
+    private Cita transform(CitaType cita) {
+        Cita novaCita = new Cita();
+        novaCita.citatPer = cita.citatPer;
+        novaCita.estatCita = cita.estatCita;
+        novaCita.perRealitzar = cita.perRealitzar;
+        novaCita.produeix = cita.produeix;
+        novaCita.teLlocA = cita.teLlocA;
+        novaCita.teLlocEn = cita.teLlocEn;
+        return novaCita;
     }
 }

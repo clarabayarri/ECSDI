@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="URLServeiDisponibilitat" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="es_troba_a" type="{http://www.owl-ontologies.com/ECSDIServices}Coordenades" maxOccurs="5000" minOccurs="0"/>
+ *         &lt;element name="es_troba_a" type="{http://www.owl-ontologies.com/ECSDIServices}Coordenades"/>
  *         &lt;element name="pot_realitzar" type="{http://www.owl-ontologies.com/ECSDIServices}Accio" maxOccurs="5000" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -40,8 +40,8 @@ public class CentreDeSalut {
 
     @XmlElement(name = "URLServeiDisponibilitat", required = true)
     protected String urlServeiDisponibilitat;
-    @XmlElement(name = "es_troba_a")
-    protected List<Coordenades> esTrobaA;
+    @XmlElement(name = "es_troba_a", required = true)
+    protected Coordenades esTrobaA;
     @XmlElement(name = "pot_realitzar")
     protected List<Accio> potRealitzar;
 
@@ -72,30 +72,25 @@ public class CentreDeSalut {
     /**
      * Gets the value of the esTrobaA property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the esTrobaA property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getEsTrobaA().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Coordenades }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link Coordenades }
+     *     
      */
-    public List<Coordenades> getEsTrobaA() {
-        if (esTrobaA == null) {
-            esTrobaA = new ArrayList<Coordenades>();
-        }
-        return this.esTrobaA;
+    public Coordenades getEsTrobaA() {
+        return esTrobaA;
+    }
+
+    /**
+     * Sets the value of the esTrobaA property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Coordenades }
+     *     
+     */
+    public void setEsTrobaA(Coordenades value) {
+        this.esTrobaA = value;
     }
 
     /**

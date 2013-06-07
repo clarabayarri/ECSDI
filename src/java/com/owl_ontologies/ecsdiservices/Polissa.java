@@ -1,8 +1,6 @@
 
 package com.owl_ontologies.ecsdiservices;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -19,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="es_del_tipus_polissa" type="{http://www.owl-ontologies.com/ECSDIServices}Tipus_polissa" maxOccurs="5000" minOccurs="0"/>
- *         &lt;element name="cobreix_a" type="{http://www.owl-ontologies.com/ECSDIServices}PacientType" maxOccurs="5000" minOccurs="0"/>
- *         &lt;element name="pertany_a" type="{http://www.owl-ontologies.com/ECSDIServices}Asseguradora" maxOccurs="5000" minOccurs="0"/>
+ *         &lt;element name="es_del_tipus_polissa" type="{http://www.owl-ontologies.com/ECSDIServices}Tipus_polissa"/>
+ *         &lt;element name="cobreix_a" type="{http://www.owl-ontologies.com/ECSDIServices}PacientType"/>
+ *         &lt;element name="pertany_a" type="{http://www.owl-ontologies.com/ECSDIServices}Asseguradora"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,98 +36,83 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Polissa {
 
-    @XmlElement(name = "es_del_tipus_polissa")
-    protected List<TipusPolissa> esDelTipusPolissa;
-    @XmlElement(name = "cobreix_a")
-    protected List<PacientType> cobreixA;
-    @XmlElement(name = "pertany_a")
-    protected List<Asseguradora> pertanyA;
+    @XmlElement(name = "es_del_tipus_polissa", required = true)
+    protected TipusPolissa esDelTipusPolissa;
+    @XmlElement(name = "cobreix_a", required = true)
+    protected PacientType cobreixA;
+    @XmlElement(name = "pertany_a", required = true)
+    protected Asseguradora pertanyA;
 
     /**
      * Gets the value of the esDelTipusPolissa property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the esDelTipusPolissa property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getEsDelTipusPolissa().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link TipusPolissa }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link TipusPolissa }
+     *     
      */
-    public List<TipusPolissa> getEsDelTipusPolissa() {
-        if (esDelTipusPolissa == null) {
-            esDelTipusPolissa = new ArrayList<TipusPolissa>();
-        }
-        return this.esDelTipusPolissa;
+    public TipusPolissa getEsDelTipusPolissa() {
+        return esDelTipusPolissa;
+    }
+
+    /**
+     * Sets the value of the esDelTipusPolissa property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TipusPolissa }
+     *     
+     */
+    public void setEsDelTipusPolissa(TipusPolissa value) {
+        this.esDelTipusPolissa = value;
     }
 
     /**
      * Gets the value of the cobreixA property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the cobreixA property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCobreixA().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PacientType }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link PacientType }
+     *     
      */
-    public List<PacientType> getCobreixA() {
-        if (cobreixA == null) {
-            cobreixA = new ArrayList<PacientType>();
-        }
-        return this.cobreixA;
+    public PacientType getCobreixA() {
+        return cobreixA;
+    }
+
+    /**
+     * Sets the value of the cobreixA property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PacientType }
+     *     
+     */
+    public void setCobreixA(PacientType value) {
+        this.cobreixA = value;
     }
 
     /**
      * Gets the value of the pertanyA property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the pertanyA property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPertanyA().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Asseguradora }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link Asseguradora }
+     *     
      */
-    public List<Asseguradora> getPertanyA() {
-        if (pertanyA == null) {
-            pertanyA = new ArrayList<Asseguradora>();
-        }
-        return this.pertanyA;
+    public Asseguradora getPertanyA() {
+        return pertanyA;
+    }
+
+    /**
+     * Sets the value of the pertanyA property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Asseguradora }
+     *     
+     */
+    public void setPertanyA(Asseguradora value) {
+        this.pertanyA = value;
     }
 
 }
