@@ -26,8 +26,8 @@ public class AgentPacient {
         new ColonoscopiaType(),
         new CirurgiaType()};
     private static final Object[] possibilitatsProfessionalsSanitaris = {
-        new EspecialistaType(),
-        new EspecialistaAnestesistaType()};
+        new VisitaMedicaEspecialistaType(),
+        new VisitaMedicaEspecialistaAnestesistaType()};
     private static final String asseguradoraService =
             "http://localhost:8080/ECSDI/Asseguradora1PortTypeService?WSDL#LlistaCentresDeSalut";
     private static final String reservesService =
@@ -41,8 +41,8 @@ public class AgentPacient {
         correspondencies.put(AnalisiType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Analisi");
         correspondencies.put(ColonoscopiaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Colonoscopia");
         correspondencies.put(CirurgiaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Cirurgia");
-        correspondencies.put(EspecialistaAnestesistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Visita_medica_especialista_anestesista");
-        correspondencies.put(EspecialistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Visita_medica_especialista");
+        correspondencies.put(VisitaMedicaEspecialistaAnestesistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Visita_medica_especialista_anestesista");
+        correspondencies.put(VisitaMedicaEspecialistaType.class, "http://www.owl-ontologies.com/ECSDIOntology.owl#Visita_medica_especialista");
     }
 
     public void executaHistoria() {

@@ -24,23 +24,15 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ConjuntOfertes_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Conjunt_ofertes");
     private final static QName _ConjuntRestriccions_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Conjunt_restriccions");
-    private final static QName _ConjuntCentres_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Conjunt_centres");
-    private final static QName _Pacient_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Pacient");
+    private final static QName _VisitaMedicaEspecialista_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Visita_medica_especialista");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.owl_ontologies.ecsdiservices
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link Resultat }
-     * 
-     */
-    public Resultat createResultat() {
-        return new Resultat();
     }
 
     /**
@@ -52,30 +44,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Pauta }
-     * 
-     */
-    public Pauta createPauta() {
-        return new Pauta();
-    }
-
-    /**
-     * Create an instance of {@link Historia }
-     * 
-     */
-    public Historia createHistoria() {
-        return new Historia();
-    }
-
-    /**
-     * Create an instance of {@link ConjuntCentresType }
-     * 
-     */
-    public ConjuntCentresType createConjuntCentresType() {
-        return new ConjuntCentresType();
-    }
-
-    /**
      * Create an instance of {@link ProfessionalSanitari }
      * 
      */
@@ -84,27 +52,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Cita }
+     * Create an instance of {@link ConjuntOfertesType }
      * 
      */
-    public Cita createCita() {
-        return new Cita();
+    public ConjuntOfertesType createConjuntOfertesType() {
+        return new ConjuntOfertesType();
     }
 
     /**
-     * Create an instance of {@link TipusPolissa }
+     * Create an instance of {@link Oferta }
      * 
      */
-    public TipusPolissa createTipusPolissa() {
-        return new TipusPolissa();
+    public Oferta createOferta() {
+        return new Oferta();
     }
 
     /**
-     * Create an instance of {@link Polissa }
+     * Create an instance of {@link Preu }
      * 
      */
-    public Polissa createPolissa() {
-        return new Polissa();
+    public Preu createPreu() {
+        return new Preu();
+    }
+
+    /**
+     * Create an instance of {@link Disponibilitat }
+     * 
+     */
+    public Disponibilitat createDisponibilitat() {
+        return new Disponibilitat();
     }
 
     /**
@@ -116,27 +92,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Accio }
+     * Create an instance of {@link VisitaMedicaEspecialistaType }
      * 
      */
-    public Accio createAccio() {
-        return new Accio();
-    }
-
-    /**
-     * Create an instance of {@link CentreDeSalut }
-     * 
-     */
-    public CentreDeSalut createCentreDeSalut() {
-        return new CentreDeSalut();
-    }
-
-    /**
-     * Create an instance of {@link PacientType }
-     * 
-     */
-    public PacientType createPacientType() {
-        return new PacientType();
+    public VisitaMedicaEspecialistaType createVisitaMedicaEspecialistaType() {
+        return new VisitaMedicaEspecialistaType();
     }
 
     /**
@@ -148,11 +108,28 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Asseguradora }
+     * Create an instance of {@link CentreDeSalut }
      * 
      */
-    public Asseguradora createAsseguradora() {
-        return new Asseguradora();
+    public CentreDeSalut createCentreDeSalut() {
+        return new CentreDeSalut();
+    }
+
+    /**
+     * Create an instance of {@link Accio }
+     * 
+     */
+    public Accio createAccio() {
+        return new Accio();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConjuntOfertesType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "Conjunt_ofertes")
+    public JAXBElement<ConjuntOfertesType> createConjuntOfertes(ConjuntOfertesType value) {
+        return new JAXBElement<ConjuntOfertesType>(_ConjuntOfertes_QNAME, ConjuntOfertesType.class, null, value);
     }
 
     /**
@@ -165,21 +142,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConjuntCentresType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VisitaMedicaEspecialistaType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "Conjunt_centres")
-    public JAXBElement<ConjuntCentresType> createConjuntCentres(ConjuntCentresType value) {
-        return new JAXBElement<ConjuntCentresType>(_ConjuntCentres_QNAME, ConjuntCentresType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PacientType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "Pacient")
-    public JAXBElement<PacientType> createPacient(PacientType value) {
-        return new JAXBElement<PacientType>(_Pacient_QNAME, PacientType.class, null, value);
+    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "Visita_medica_especialista")
+    public JAXBElement<VisitaMedicaEspecialistaType> createVisitaMedicaEspecialista(VisitaMedicaEspecialistaType value) {
+        return new JAXBElement<VisitaMedicaEspecialistaType>(_VisitaMedicaEspecialista_QNAME, VisitaMedicaEspecialistaType.class, null, value);
     }
 
 }

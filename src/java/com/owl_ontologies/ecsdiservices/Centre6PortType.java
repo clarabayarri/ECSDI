@@ -28,15 +28,15 @@ public class Centre6PortType {
      * @param restriccionsMetgeEspecialista
      * @param tipusMetgeEspecialista
      * @return
-     *     returns com.owl_ontologies.ecsdiservices.ConjuntOfertesType
+     *     returns ConjuntOfertesType
      */
     @WebMethod(operationName = "DemanarDisponibilitat")
     @WebResult(name = "ofertesMetgeEspecialista", partName = "ofertesMetgeEspecialista")
     public ConjuntOfertesType demanarDisponibilitat(
-        @WebParam(name = "restriccionsMetgeEspecialista", partName = "restriccionsMetgeEspecialista")
-        ConjuntRestriccionsType restriccionsMetgeEspecialista,
         @WebParam(name = "tipusMetgeEspecialista", partName = "tipusMetgeEspecialista")
-        EspecialistaType tipusMetgeEspecialista) {
+        VisitaMedicaEspecialistaType tipusMetgeEspecialista,
+        @WebParam(name = "restriccionsMetgeEspecialista", partName = "restriccionsMetgeEspecialista")
+        ConjuntRestriccionsType restriccionsMetgeEspecialista) {
         CentreImpl implementacio = new CentreImpl();
         return implementacio.demanarDisponibilitat(tipusMetgeEspecialista, restriccionsMetgeEspecialista);
     }

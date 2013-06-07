@@ -33,10 +33,10 @@ public class Centre5PortType {
     @WebMethod(operationName = "DemanarDisponibilitat")
     @WebResult(name = "ofertesMetgeEspecialistaAnestesista", partName = "ofertesMetgeEspecialistaAnestesista")
     public ConjuntOfertesType demanarDisponibilitat(
-        @WebParam(name = "restriccionsMetgeEspecialistaAnestesista", partName = "restriccionsMetgeEspecialistaAnestesista")
-        ConjuntRestriccionsType restriccionsMetgeEspecialistaAnestesista,
         @WebParam(name = "tipusMetgeEspecialistaAnestesista", partName = "tipusMetgeEspecialistaAnestesista")
-        EspecialistaAnestesistaType tipusMetgeEspecialistaAnestesista) {
+        VisitaMedicaEspecialistaAnestesistaType tipusMetgeEspecialistaAnestesista,
+        @WebParam(name = "restriccionsMetgeEspecialistaAnestesista", partName = "restriccionsMetgeEspecialistaAnestesista")
+        ConjuntRestriccionsType restriccionsMetgeEspecialistaAnestesista) {
         CentreImpl implementacio = new CentreImpl();
         return implementacio.demanarDisponibilitat(implementacio, restriccionsMetgeEspecialistaAnestesista);
     }
