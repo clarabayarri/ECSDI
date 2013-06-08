@@ -38,7 +38,6 @@ public class ReservesPortType {
         @WebParam(name = "ofertaReserva", partName = "ofertaReserva")
         OfertaType ofertaReserva) {
         CitaType cita = new CitaType();
-        //cita.estatCita = EstatCitaType.CONCERTADA;
         cita.perRealitzar = ofertaReserva.esPerUna;
         cita.teLlocA = ofertaReserva.pertanyAUn;
         if ((ofertaReserva.estaDisponibleEn != null) && 
